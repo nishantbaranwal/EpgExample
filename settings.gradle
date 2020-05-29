@@ -1,0 +1,2 @@
+rootProject.name='EpgExample'
+include ':app'

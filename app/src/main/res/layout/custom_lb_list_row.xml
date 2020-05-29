@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+            <FrameLayout
+                android:id="@+id/header_container"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusLeft="@id/header_container"
+                android:orientation="vertical" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:id="@+id/grid_view_ll"
+            android:nextFocusLeft="@id/header_container">
+
+            <androidx.leanback.widget.HorizontalGridView
+                android:id="@+id/grid_view"
+                style="?attr/rowHorizontalGridStyle"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:clipToPadding="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:focusedByDefault="false"
+                tools:targetApi="o" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

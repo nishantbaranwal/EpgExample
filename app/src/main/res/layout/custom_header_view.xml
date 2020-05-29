@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable name="header_data" type="com.example.epgexample.CustomHeaderItem"/>
+    </data>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_margin="3dp"
+        android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/header"
+        android:layout_gravity="center"
+        android:focusable="false"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        app:imageSource='@{header_data.icon.toString()}'
+        android:src="@drawable/placeholder_image"
+        android:focusableInTouchMode="false"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/header_title"
+        android:layout_gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:focusable="false"
+        android:text='@{header_data.headerTitle}'
+        android:focusableInTouchMode="false"
+        />
+    </LinearLayout>
+</layout>
